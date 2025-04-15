@@ -1,5 +1,4 @@
-
-import { ArrowDown, GitHub, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -47,7 +46,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHub size={22} />
+              <Github size={22} />
             </a>
             <a 
               href="#" 
