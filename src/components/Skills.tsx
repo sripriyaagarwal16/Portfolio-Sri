@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 
 interface Skill {
@@ -54,11 +53,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-28 relative overflow-hidden bg-gradient-to-b from-background to-black/50">
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[100px]"></div>
-      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[100px]"></div>
-      
-      <div className="section-container relative z-10">
+    <section id="skills" className="py-20">
+      <div className="section-container">
         <h2 className="section-title">My Skills</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
@@ -95,21 +91,21 @@ const Skills = () => {
           
           <div className="space-y-6">
             {skills.map((skill, index) => (
-              <div key={skill.name} className="opacity-0 animate-fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={skill.name} className="animate-fadeIn opacity-0" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="flex justify-between items-center mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{skill.icon}</span>
                     <h4 className="font-medium">{skill.name}</h4>
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">{skill.level}%</span>
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{skill.level}%</span>
                 </div>
-                <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
+                <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                   <div 
                     className="skill-bar-fill h-full w-0 transition-all duration-1000 ease-out"
                     data-width={skill.level}
                     style={{ 
                       width: '0%',
-                      backgroundImage: 'linear-gradient(to right, var(--primary), var(--accent))'
+                      backgroundImage: 'linear-gradient(to right, #9b87f5, #33C3F0)'
                     }}
                   ></div>
                 </div>

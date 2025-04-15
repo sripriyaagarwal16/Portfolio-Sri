@@ -1,7 +1,11 @@
 
 import { useState } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
-
+import sleep from '../assets/sleep.png';
+import ardhnaari from '../assets/Ardhnaari.png'
+import shesync from "../assets/SheSync.png"
+import dsa from "../assets/DSA.png"
+import sarcasm from "../assets/Sarcasm.png"
 type Project = {
   id: number;
   title: string;
@@ -19,60 +23,60 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Machine Learning Image Classifier",
-      description: "A sophisticated image classification system built with TensorFlow and Python, achieving 95% accuracy on test datasets.",
-      image: "/placeholder.svg",
+      title: "Sleep Detection Cycle using BiLSTM-GCN",
+      description: "This research aims to investigate the detection of neurological abnormalities in EEG data using a dataset containing EEG signals and provided sleep stage annotations. Leveraging comprehensive EEG recordings with accompanying sleep stage annotations, the study seeks to identify abnormal EEG patterns indicative of neurological dysfunction within the context of sleep stages. ",
+      image: sleep,
       category: ["machine-learning", "python"],
-      technologies: ["Python", "TensorFlow", "Keras", "NumPy"],
-      githubUrl: "#",
+      technologies: ["Python", "TensorFlow", "Keras", "NumPy","Machine Learning", "Deep Learning"],
+      githubUrl: "https://github.com/sripriyaagarwal16/Detecting-stages-of-sleep",
     },
     {
       id: 2,
-      title: "E-Commerce Website",
-      description: "A fully responsive e-commerce platform built with React, featuring cart functionality, user authentication, and payment integration.",
-      image: "/placeholder.svg",
+      title: "Ardh Naari Shakti",
+      description: "Our platform is a safe and inclusive digital space dedicated to empowering the transgender community through technology and community-driven support. It offers a confidential chatbot for guidance, a hub for job opportunities to promote economic independence, a safe spaces locator for those facing rejection or discrimination, and a moderated blog section for sharing personal stories and building community. By addressing key challenges faced by transgender individuals, the platform fosters dignity, resilience, and belonging, while contributing to the broader goal of peace, justice, and strong institutions.",
+      image: ardhnaari,
       category: ["web", "react"],
       technologies: ["React", "Redux", "Node.js", "Express", "MongoDB"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/sripriyaagarwal16/Ardh-Naari-Shakti",
+      liveUrl: " https://ardhnaarishaktitaara.netlify.app",
     },
     {
       id: 3,
-      title: "C++ Data Structure Visualization",
-      description: "An educational tool that visualizes common data structures and algorithms implemented in C++.",
-      image: "/placeholder.svg",
-      category: ["cpp"],
-      technologies: ["C++", "SFML", "CMake"],
-      githubUrl: "#",
+      title: "NADA Sentinel",
+      description: "NADA Sentinel is a comprehensive anti-doping investigation platform developed during (SIH) 2024 for the SportsMinistry of India. It integrates AI-powered models for analyzing forensic reports, audio testimonies, and imageevidence to help streamline and support the anti-doping investigation process.The system ensures whistleblower protection and role-based access for Admins, Analysts, and Investigators,all while maintaining complete anonymity and case integrity.",
+      image: "https://img.manoramayearbook.in/content/dam/yearbook/learn/world/images/2024/may/nada.jpg",
+      category: ["web","react","machine-learning"],
+      technologies: ["Python", "TensorFlow", "Keras", "NumPy","Machine Learning","React", "Redux", "Node.js", "Express", "MongoDB"],
+      githubUrl: "https://github.com/sripriyaagarwal16/AntiDoping",
     },
     {
       id: 4,
-      title: "Real-time Chat Application",
-      description: "A real-time messaging platform with features like typing indicators, read receipts, and file sharing.",
-      image: "/placeholder.svg",
-      category: ["web", "react"],
-      technologies: ["React", "Socket.io", "Express", "MongoDB"],
-      githubUrl: "#",
-      liveUrl: "#",
+      title: "She-Sync",
+      description: "SheSync is a comprehensive women's health platform designed to empower users with personalized menstrual health tracking, education, and support. Our platform combines AI-powered insights with community features to create a holistic approach to menstrual wellness.",
+      image: shesync,
+      category: ["web", "react","Tensorflow"],
+      technologies: ["React", "Socket.io", "Express", "MongoDB","Typescript","Google Map Api ","Tensorflow","Gemini"],
+      githubUrl: "https://github.com/divi-24/Google-Solution2K25",
+      liveUrl: "https://shesync.netlify.app/",
     },
     {
       id: 5,
-      title: "Predictive Text Generator",
-      description: "A machine learning model that generates text based on input prompts, trained on a diverse corpus of literature.",
-      image: "/placeholder.svg",
-      category: ["machine-learning", "python"],
-      technologies: ["Python", "NLTK", "TensorFlow", "Transformers"],
-      githubUrl: "#",
+      title: "DSA Basic to hard Level",
+      description: " This github is here with all the different data structures of DSA,their algorithms and some solutions to problems.I hope this might help you guys...",
+      image: dsa,
+      category: ["cpp"],
+      technologies: ["cpp"],
+      githubUrl: "https://github.com/sripriyaagarwal16/DSA-Basic_to_hard_level",
     },
     {
       id: 6,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with React and Tailwind CSS.",
-      image: "/placeholder.svg",
-      category: ["web", "react"],
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "#",
-      liveUrl: "#",
+      title: "Model Comparison for Sarcasm Detection",
+      description: "This project focuses on comparison between different AI-models that can be used to detect the twitter sarcastic text..We have compared all the models including ADASYN,LSTM and Bagging Random Forest.ADASYN (Adaptive Synthetic Sampling):Description: ADASYN is an oversampling technique used to balance imbalanced datasets. In the context of sarcasm detection, it might be applied to address the class imbalance issue if sarcastic and non-sarcastic tweets are not evenly distributed.Application: ADASYN can be used to generate synthetic examples of the minority class (sarcastic tweets) to improve the model's ability to detect sarcasm in an imbalanced dataset.",
+      image: sarcasm,
+      category: ["machine-learning", "python"],
+      technologies: ["Machine Learning","Python","ADASYN","LSTM","Bagging Random Forest"],
+      githubUrl: "https://github.com/sripriyaagarwal16/Model-Comparison-Sarcasm-Detection",
+      
     },
   ];
   

@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold gradient-heading">Your Name</h2>
+            <h2 className="text-2xl font-bold gradient-heading">Sripriya Agarwal</h2>
             <p className="text-muted-foreground mt-2">Front-End Developer & ML Enthusiast</p>
           </div>
           
           <div className="flex gap-6">
             <a 
-              href="#" 
+              href="https://github.com/sripriyaagarwal16" 
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="GitHub"
               target="_blank"
@@ -24,7 +24,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/sripriya-agarwal-483475261/" 
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="LinkedIn"
               target="_blank"
@@ -33,7 +33,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:youremail@example.com" 
+              href="mailto:sripriyaagarwal70@gmail.com" 
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
@@ -62,7 +62,7 @@ const Footer = () => {
           </nav>
           
           <p className="text-muted-foreground text-sm flex items-center">
-            <span>© {currentYear} Your Name. All rights reserved.</span>
+            <span>© {2025} Sripriya Agarwal. All rights reserved.</span>
             <span className="inline-flex items-center ml-1">
               Made with <Heart size={14} className="mx-1 text-primary" /> 
             </span>

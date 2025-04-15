@@ -59,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Email</h3>
-                  <p className="text-muted-foreground">youremail@example.com</p>
+                  <p className="text-muted-foreground">sripriyaagarwal70@gmail.com</p>
                 </div>
               </div>
               
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">LinkedIn</h3>
-                  <p className="text-muted-foreground">linkedin.com/in/yourname</p>
+                  <p className="text-muted-foreground">https://www.linkedin.com/in/sripriya-agarwal-483475261/</p>
                 </div>
               </div>
               
@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">GitHub</h3>
-                  <p className="text-muted-foreground">github.com/yourusername</p>
+                  <p className="text-muted-foreground">https://github.com/sripriyaagarwal16</p>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ const Contact = () => {
               </p>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/sripriyaagarwal16" 
                   className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Contact = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/sripriya-agarwal-483475261/" 
                   className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const Contact = () => {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="mailto:youremail@example.com" 
+                  href="mailto:sripriyaagarwal70@gmail.com" 
                   className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail size={20} />
