@@ -54,32 +54,35 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
-      <div className="section-container">
+    <section id="skills" className="py-28 relative overflow-hidden bg-gradient-to-b from-background to-black/50">
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[100px]"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[100px]"></div>
+      
+      <div className="section-container relative z-10">
         <h2 className="section-title">My Skills</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
           <div className="space-y-6">
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-lg text-muted-foreground">
               I've developed a diverse skill set throughout my journey as a developer.
               Here's an overview of my technical skills and competencies:
             </p>
             
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+            <div className="glass-card rounded-xl p-6">
               <h3 className="text-xl font-semibold mb-4 gradient-heading">Skill Categories</h3>
               <div className="grid grid-cols-2 gap-4">
                 {categories.map((category) => (
                   <div key={category.id} className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-portfolio-purple"></div>
-                    <span>{category.name}</span>
+                    <div className="w-3 h-3 rounded-full bg-primary"></div>
+                    <span className="text-muted-foreground">{category.name}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+            <div className="glass-card rounded-xl p-6">
               <h3 className="text-xl font-semibold mb-4 gradient-heading">Technical Strengths</h3>
-              <ul className="space-y-2 pl-5 list-disc text-gray-600 dark:text-gray-400">
+              <ul className="space-y-2 pl-5 list-disc text-muted-foreground">
                 <li>Building responsive, modern React applications</li>
                 <li>Developing and training machine learning models</li>
                 <li>Creating efficient algorithms in C++ and Python</li>
@@ -92,21 +95,21 @@ const Skills = () => {
           
           <div className="space-y-6">
             {skills.map((skill, index) => (
-              <div key={skill.name} className="animate-fadeIn opacity-0" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={skill.name} className="opacity-0 animate-fadeIn" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="flex justify-between items-center mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{skill.icon}</span>
                     <h4 className="font-medium">{skill.name}</h4>
                   </div>
-                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{skill.level}%</span>
+                  <span className="text-sm font-medium text-muted-foreground">{skill.level}%</span>
                 </div>
-                <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
                   <div 
                     className="skill-bar-fill h-full w-0 transition-all duration-1000 ease-out"
                     data-width={skill.level}
                     style={{ 
                       width: '0%',
-                      backgroundImage: 'linear-gradient(to right, #9b87f5, #33C3F0)'
+                      backgroundImage: 'linear-gradient(to right, var(--primary), var(--accent))'
                     }}
                   ></div>
                 </div>

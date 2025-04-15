@@ -90,8 +90,11 @@ const Projects = () => {
     : projects.filter(project => project.category.includes(filter));
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="section-container">
+    <section id="projects" className="py-28 relative overflow-hidden">
+      <div className="absolute top-1/3 left-0 w-96 h-96 rounded-full bg-primary/5 blur-[100px]"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-accent/5 blur-[100px]"></div>
+      
+      <div className="section-container relative z-10">
         <h2 className="section-title">Featured Projects</h2>
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -101,8 +104,8 @@ const Projects = () => {
               onClick={() => setFilter(category.id)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 filter === category.id
-                  ? 'bg-portfolio-purple text-white'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-primary text-white'
+                  : 'glass-card text-muted-foreground hover:text-white'
               }`}
             >
               {category.name}
@@ -114,10 +117,10 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-hover animate-fadeIn opacity-0"
+              className="glass-card rounded-xl overflow-hidden card-hover opacity-0 animate-fadeIn"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="h-48 bg-gray-200 dark:bg-gray-700 relative overflow-hidden">
+              <div className="h-48 bg-secondary/30 relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
@@ -126,14 +129,14 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                <p className="text-muted-foreground mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map(tech => (
                     <span 
                       key={tech} 
-                      className="px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 rounded-full"
+                      className="px-2 py-1 text-xs font-medium bg-secondary/50 rounded-full text-muted-foreground"
                     >
                       {tech}
                     </span>
@@ -144,7 +147,7 @@ const Projects = () => {
                   {project.githubUrl && (
                     <a 
                       href={project.githubUrl}
-                      className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-portfolio-purple dark:hover:text-portfolio-purple-light"
+                      className="flex items-center gap-1 text-muted-foreground hover:text-primary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -156,7 +159,7 @@ const Projects = () => {
                   {project.liveUrl && (
                     <a 
                       href={project.liveUrl}
-                      className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-portfolio-purple dark:hover:text-portfolio-purple-light"
+                      className="flex items-center gap-1 text-muted-foreground hover:text-primary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -173,7 +176,7 @@ const Projects = () => {
         <div className="text-center mt-12">
           <a 
             href="#"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 border border-portfolio-purple rounded-full text-portfolio-purple hover:bg-portfolio-purple-light/10 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 glass-card rounded-full text-primary hover:text-white hover:bg-primary/20 transition-colors"
           >
             <span>View All Projects</span>
             <ExternalLink size={18} />

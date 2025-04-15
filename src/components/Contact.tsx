@@ -37,71 +37,78 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="section-container">
+    <section id="contact" className="py-28 relative overflow-hidden bg-gradient-to-b from-black/50 to-background">
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[100px]"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[100px]"></div>
+      
+      <div className="section-container relative z-10">
         <h2 className="section-title">Get In Touch</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-lg text-muted-foreground">
               Have a project in mind or just want to say hello? Feel free to reach out!
               I'm always open to discussing new projects, creative ideas, or opportunities
               to be part of your vision.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full bg-portfolio-softPurple text-portfolio-purple">
+                <div className="p-3 rounded-full bg-primary/10 text-primary">
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h3 className="font-medium">Email</h3>
-                  <p className="text-gray-600 dark:text-gray-400">youremail@example.com</p>
+                  <h3 className="font-medium text-white">Email</h3>
+                  <p className="text-muted-foreground">youremail@example.com</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full bg-portfolio-softYellow text-portfolio-purple">
+                <div className="p-3 rounded-full bg-accent/10 text-accent">
                   <Linkedin size={20} />
                 </div>
                 <div>
-                  <h3 className="font-medium">LinkedIn</h3>
-                  <p className="text-gray-600 dark:text-gray-400">linkedin.com/in/yourname</p>
+                  <h3 className="font-medium text-white">LinkedIn</h3>
+                  <p className="text-muted-foreground">linkedin.com/in/yourname</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full bg-portfolio-softGreen text-portfolio-purple">
+                <div className="p-3 rounded-full bg-primary/10 text-primary">
                   <Github size={20} />
                 </div>
                 <div>
-                  <h3 className="font-medium">GitHub</h3>
-                  <p className="text-gray-600 dark:text-gray-400">github.com/yourusername</p>
+                  <h3 className="font-medium text-white">GitHub</h3>
+                  <p className="text-muted-foreground">github.com/yourusername</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-100 dark:border-gray-700">
+            <div className="glass-card rounded-xl p-6">
               <h3 className="text-xl font-semibold mb-4 gradient-heading">Let's Connect</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Follow me on social media or check out my work:
               </p>
               <div className="flex gap-4">
                 <a 
                   href="#" 
-                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Github size={20} />
                 </a>
                 <a 
                   href="#" 
-                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="#" 
-                  className="p-3 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-portfolio-purple hover:text-white transition-colors"
+                  href="mailto:youremail@example.com" 
+                  className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail size={20} />
                 </a>
@@ -109,12 +116,12 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 animate-fadeIn opacity-0" style={{ animationDelay: '200ms' }}>
-            <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
+          <div className="glass-card rounded-xl p-8 opacity-0 animate-fadeIn" style={{ animationDelay: '200ms' }}>
+            <h3 className="text-xl font-semibold mb-6 text-white">Send Me a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block mb-2 text-sm font-medium">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium text-muted-foreground">
                   Your Name
                 </label>
                 <Input
@@ -124,11 +131,12 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="John Doe"
                   required
+                  className="bg-secondary/30 border-secondary/50 focus:border-primary"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium text-muted-foreground">
                   Your Email
                 </label>
                 <Input
@@ -139,11 +147,12 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="john@example.com"
                   required
+                  className="bg-secondary/30 border-secondary/50 focus:border-primary"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block mb-2 text-sm font-medium">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium text-muted-foreground">
                   Your Message
                 </label>
                 <Textarea
@@ -154,12 +163,13 @@ const Contact = () => {
                   placeholder="Hi, I'd like to talk about..."
                   rows={5}
                   required
+                  className="bg-secondary/30 border-secondary/50 focus:border-primary"
                 />
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-portfolio-purple to-portfolio-teal hover:opacity-90 transition-opacity"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
                 disabled={loading}
               >
                 {loading ? (
