@@ -8,9 +8,10 @@
 
 There are several ways of editing your application.
 
-**My porfolio**
+**My Portfolio**
 
-Simply visit the [Portfolio][https://portfolio-sri-five.vercel.app/].
+Simply visit the [Portfolio](https://portfolio-sri-five.vercel.app/).
+
 
 
 
